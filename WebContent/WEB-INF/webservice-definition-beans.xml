@@ -12,6 +12,6 @@
                  implementor="#webStoreServiceSoapBean" 
                  address="/service/WebStoreServiceSoap" 
                  publish="true"                
-  publishedEndpointUrl="http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap" />
+  publishedEndpointUrl="http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap" />
 
 </beans>
