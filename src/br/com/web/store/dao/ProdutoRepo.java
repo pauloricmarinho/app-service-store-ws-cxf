@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import br.com.web.store.dto.InGameDTO;
 import br.com.web.store.dto.OutGameDTO;
@@ -31,7 +32,8 @@ public class ProdutoRepo {
 	}
 	
 	public Optional<OutGameDTO> obterJogo(InGameDTO inGameDTO) {	
-		if(!"".equals(inGameDTO.getNome())) {
+		
+		if((StringUtils.isEmpty(inGameDTO.getNome())) && !"".equals(inGameDTO.getNome())) {
 			return listaJogos.stream().filter(game -> game.getNome().equals(inGameDTO.getNome())).findFirst();
 		}
 		return listaJogos.stream().filter(game -> game.getId().compareTo(inGameDTO.getId())==0).findFirst();
