@@ -4,7 +4,7 @@ public class InGameDTO {
 
 	private Integer id;
 	
-	private String nome;
+	private String nome = "";
 
 	public Integer getId() {
 		return id;
